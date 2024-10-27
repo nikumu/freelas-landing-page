@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Button from "../components/Button.astro";
+import ButtonB from "../components/ButtonB.astro";
+---
+
+<Layout title="Home | Freelas">
+	<Header />
+	<main
+		class="mt-16 xl:mt-24 px-8 md:px-12 xl:px-28 flex flex-col gap-16 xl:flex-row-reverse xl:items-center"
+	>
+		<img src="ai-generated-8718795_640.png" alt="" class="mx-auto w-1/4" />
+
+		<div
+			class="flex flex-col gap-8 items-center xl:items-start text-center xl:text-left"
+		>
+			<h1 class="text-4xl xl:text-5xl font-bold">
+				Encontre os melhores freelancers para seu projeto
+				<span class="text-cyan-600 dark:text-cyan-400">Hoje</span>!
+			</h1>
+			<p class="md:text-xl">
+				Transforme suas ideias em realidade com os melhores talentos
+				freelancers do mercado. Encontre especialistas em design,
+				desenvolvimento, redação e muito mais, prontos para entregar
+				projetos excepcionais.
+			</p>
+			<ButtonB />
+		</div>
+	</main>
+</Layout>
+<footer class="fixed inset-x-0 bottom-0 md:text-xl text-center text-white py-4">
+	Copyright &copy; 2024 by Nikumu
+</footer>

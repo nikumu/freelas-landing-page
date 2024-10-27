@@ -1,0 +1,37 @@
+---
+import Button from "./Button.astro";
+---
+
+<script>
+    document
+        .getElementById("navMenuToggler")
+        ?.addEventListener("click", function () {
+            const navMenu = document.getElementById("navMenu");
+            navMenu?.classList.toggle("h-0");
+            navMenu?.classList.toggle("h-full");
+            navMenu?.classList.toggle("opacity-0");
+            navMenu?.classList.toggle("opacity-100");
+        });
+</script>
+
+<header class="h-12 md:h-20 px-8 md:px-12 xl:px-28 flex gap-12 items-center">
+    <a href="#" class="text-4xl font-bold">Freelas.com</a>
+
+    <button id="navMenuToggler" class="fixed top-0 right-0 p-4 z-20 lg:hidden">
+        Menu
+    </button>
+    <div
+        id="navMenu"
+        class="fixed lg:relative top-0 left-0 bg-dark bg-opacity-95 text-center
+        overflow-hidden transition-all duration-500 flex flex-col lg:flex-row gap-8 items-center justify-center
+        w-full h-0 opacity-0 z-10 lg:h-full lg:opacity-100"
+    >
+        <nav class="lg:flex-1 flex gap-8 flex-col lg:flex-row text-2xl">
+            <a href="#">Freelancers</a>
+            <a href="#">Projetos</a>
+            <a href="#">Como funciona</a>
+            <a href="#">Publicar projeto</a>
+        </nav>
+        <Button />
+    </div>
+</header>
